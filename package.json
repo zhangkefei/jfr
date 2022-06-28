@@ -1,8 +1,8 @@
 {
-	"name": "vite-docs-cn",
+	"name": "jfr-docs-cn",
 	"version": "1.0.0",
-	"description": "Vite.js documentation Chinese translation.",
-	"repository": "https://github.com/vitejs/docs-cn",
+	"description": "jfr documentation Chinese translation.",
+	"repository": "https://github.com/zhangkefei/jfr",
 	"author": "zhangkefei",
 	"license": "MIT",
 	"private": true,
