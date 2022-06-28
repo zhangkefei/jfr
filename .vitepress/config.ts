@@ -2,10 +2,10 @@ import { defineConfig } from 'vitepress'
 import renderPermaLink from './render-perma-link'
 import MarkDownItCustomAnchor from './markdown-it-custom-anchor'
 
-const ogDescription = 'Next Generation Frontend Tooling'
-const ogImage = 'https://main.vitejs.dev/og-image.png'
+const ogDescription = '自由的JS包管理平台'
+const ogImage = ''
 const ogTitle = 'JFR'
-const ogUrl = 'https://main.vitejs.dev'
+const ogUrl = 'https://zhangkefei.github.io/jfr/'
 
 export default defineConfig({
   title: 'JFR',
@@ -18,12 +18,7 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: ogTitle }],
     ['meta', { property: 'og:image', content: ogImage }],
-    ['meta', { property: 'og:url', content: ogUrl }],
-    ['meta', { property: 'twitter:description', content: ogDescription }],
-    ['meta', { property: 'twitter:title', content: ogTitle }],
-    ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { property: 'twitter:image', content: ogImage }],
-    ['meta', { property: 'twitter:url', content: ogUrl }]
+    ['meta', { property: 'og:url', content: ogUrl }]
   ],
 
   vue: {
@@ -32,85 +27,35 @@ export default defineConfig({
 
   themeConfig: {
     logo: './diamond.svg',
-
-    // editLink: {
-    //   text: '为此页提供修改建议',
-    //   pattern: 'https://github.com/vitejs/docs-cn/edit/main/docs/:path',
-    // },
-
-    // socialLinks: [
-    //   { icon: 'twitter', link: 'https://twitter.com/vite_js' },
-    //   { icon: 'discord', link: 'https://chat.vitejs.dev' },
-    //   { icon: 'github', link: 'https://github.com/vitejs/vite' }
-    // ],
-
-    // algolia: {
-    //   apiKey: 'b573aa848fd57fb47d693b531297403c',
-    //   indexName: 'vitejs',
-    //   searchParameters: {
-    //     facetFilters: ['tags:cn']
-    //   }
-    // },
-
-    // carbonAds: {
-    //   code: 'CEBIEK3N',
-    //   placement: 'vitejsdev'
-    // },
-
     localeLinks: {
       text: '简体中文',
       items: [
-        { text: 'English', link: 'https://vitejs.dev' },
+        { text: 'English', link: 'https://zhangkefei.github.io/jfr/' },
       ]
     },
 
     footer: {
-      message: '根据 MIT 许可证发布。',
+      message: '根据 MIT 许可证发布',
       copyright: 'Copyright © 2022 HIBIT & JFR Contributors'
     },
 
     nav: [
+      { text: '首页', link: '/', activeMatch: '' },
       { text: '指引', link: '/guide/', activeMatch: '/guide/' },
       { text: '配置', link: '/config/', activeMatch: '/config/' },
-      { text: '插件', link: '/plugins/', activeMatch: '/plugins/' },
       {
         text: '相关链接',
         items: [
-          // {
-          //   text: 'Twitter',
-          //   link: 'https://twitter.com/vite_js'
-          // },
-          // {
-          //   text: 'Discord Chat',
-          //   link: 'https://chat.vitejs.dev'
-          // },
           {
             text: 'Awesome JFR',
             link: 'https://'
           },
-          // {
-          //   text: 'Dev.to 社区',
-          //   link: 'https://dev.to/t/vite'
-          // },
-          // {
-          //   text: 'Rollup 插件兼容',
-          //   link: 'https://vite-rollup-plugins.patak.dev/'
-          // },
           {
             text: '更新日志',
             link: 'https://'
           }
         ]
       },
-      // {
-      //   text: 'v3 (next)',
-      //   items: [
-      //     {
-      //       text: 'v2.x（稳定版）',
-      //       link: 'https://v2.vitejs.dev'
-      //     }
-      //   ]
-      // }
     ],
 
     sidebar: {
@@ -119,7 +64,7 @@ export default defineConfig({
           text: '指引',
           items: [
             {
-              text: '为什么选 JFR',
+              text: '为什么用 JFR',
               link: '/guide/why'
             },
             {
@@ -130,67 +75,35 @@ export default defineConfig({
               text: '功能',
               link: '/guide/features'
             },
-            {
-              text: '使用插件',
-              link: '/guide/using-plugins'
-            },
-            {
-              text: '依赖预构建',
-              link: '/guide/dep-pre-bundling'
-            },
-            {
-              text: '静态资源处理',
-              link: '/guide/assets'
-            },
-            {
-              text: '构建生产版本',
-              link: '/guide/build'
-            },
-            {
-              text: '部署静态站点',
-              link: '/guide/static-deploy'
-            },
-            {
-              text: '环境变量与模式',
-              link: '/guide/env-and-mode'
-            },
-            {
-              text: '服务端渲染（SSR）',
-              link: '/guide/ssr'
-            },
-            {
-              text: '后端集成',
-              link: '/guide/backend-integration'
-            },
-            {
-              text: '比较',
-              link: '/guide/comparisons'
-            },
-            {
-              text: '从 v2 迁移',
-              link: '/guide/migration'
-            }
           ]
         },
         {
-          text: 'API',
+          text: '命令',
           items: [
             {
-              text: '插件 API',
-              link: '/guide/api-plugin'
+              text: '登入 login',
+              link: '/guide/command-login'
             },
             {
-              text: 'HMR API',
-              link: '/guide/api-hmr'
+              text: '登出 logout',
+              link: '/guide/command-logout'
             },
             {
-              text: 'JavaScript API',
-              link: '/guide/api-javascript'
+              text: '搜索 search',
+              link: '/guide/command-search'
             },
             {
-              text: '配置参考',
-              link: '/config/'
-            }
+              text: '安装 install',
+              link: '/guide/command-install'
+            },
+            {
+              text: '发布 publish',
+              link: '/guide/command-publish'
+            },
+            {
+              text: '价格 price',
+              link: '/guide/command-price'
+            },
           ]
         }
       ],
@@ -199,7 +112,7 @@ export default defineConfig({
           text: '配置',
           items: [
             {
-              text: '配置 Vite',
+              text: '配置 JFR',
               link: '/config/'
             },
             {
