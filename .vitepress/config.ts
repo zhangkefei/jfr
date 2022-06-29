@@ -42,7 +42,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/', activeMatch: '' },
       { text: '指引', link: '/guide/', activeMatch: '/guide/' },
-      { text: '配置', link: '/config/', activeMatch: '/config/' },
+      // { text: '配置', link: '/config/', activeMatch: '/config/' },
       {
         text: '相关链接',
         items: [
