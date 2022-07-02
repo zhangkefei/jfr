@@ -16,7 +16,7 @@
 	},
 	"scripts": {
 		"dev": "vitepress dev . --host",
-		"build": "node ./scripts/build.js && vitepress build .",
+		"build": "node ./scripts/build.js && vitepress build . && rm -rf ./docs && mv ./.vitepress/dist ./docs",
 		"serve": "vitepress serve ."
 	},
 	"gitHooks": {
