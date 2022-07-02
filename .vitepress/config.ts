@@ -82,27 +82,27 @@ export default defineConfig({
           items: [
             {
               text: '登入 login',
-              link: '/guide/command-login'
+              link: '/guide/command/login'
             },
             {
               text: '登出 logout',
-              link: '/guide/command-logout'
+              link: '/guide/command/logout'
             },
             {
               text: '搜索 search',
-              link: '/guide/command-search'
+              link: '/guide/command/search'
             },
             {
               text: '安装 install',
-              link: '/guide/command-install'
+              link: '/guide/command/install'
             },
             {
               text: '发布 publish',
-              link: '/guide/command-publish'
+              link: '/guide/command/publish'
             },
             {
               text: '价格 price',
-              link: '/guide/command-price'
+              link: '/guide/command/price'
             },
           ]
         }
